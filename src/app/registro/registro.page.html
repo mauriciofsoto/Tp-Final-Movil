@@ -1,12 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h2>Registro</h2>
-    
-</body>
-</html>
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>Registro</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="registrarse-container">
+        <form class="credencial">
+
+            <ion-item>
+                <ion-label position="floating">Nombre completo</ion-label>
+                <ion-input type="text" #usuario required></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input type="text" #email required></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Contraseña</ion-label>
+                <ion-input type="password" #password required></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Repetir contraseña</ion-label>
+                <ion-input type="password" #Reppassword required></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Fecha de nacimiento</ion-label>
+                <ion-input type="date" #fecha required></ion-input>
+            </ion-item>
+
+        </form>
+
+        <ion-button class="btn-regisrarse" expand="full"
+            (click)="iniciarSesion(usuario.value?.toString()  '', password.value?.toString()  '')">
+            Registrarse
+        </ion-button>
+
+
+        <div class="Cuenta-btn">
+            <p class="Cuenta">
+                ¿Ya tenes cuenta?
+                <ion-button class="btn-iniciarSesion" (click)="" fill="clear">Inicar sesión</ion-button>
+            </p>
+        </div>
+    </div>
+</ion-content>
