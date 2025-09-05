@@ -1,0 +1,135 @@
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.credencial ion-item {
+    --highlight-color: transparent;
+    /* línea normal transparente */
+    --border-color: transparent;
+    /* borde normal transparente */
+    --background: transparent;
+    --highlight-color-focused: #8000ff;
+    /* línea violeta al enfocar */
+    --highlight-height: 2px;
+    /* grosor de la línea */
+}
+
+.credencial ion-item:focus-within {
+    --border-bottom: 2px solid #8000ff;
+    /* línea violeta al escribir */
+}
+
+.btn-iniciarSesion {
+    --border-radius: 5px;
+    --border: none;
+    --color: #27014e;
+    --background: #8000ff;
+    --cursor: pointer;
+    --padding: 10px;
+}
+
+.btn-iniciarSesion:hover {
+    --border-radius: 10px;
+    --color: #c596f5;
+    --background: #27014e;
+}
+
+.recuperarContraseña {
+    --background: transparent !important;
+    /* fondo transparente */
+    --background-focused: transparent !important;
+    --background-hover: transparent !important;
+    --border: none !important;
+    --color: white !important;
+    --box-shadow: none !important;
+    font-size: 9px;
+    position: relative;
+    right: 29%;
+}
+
+.recuperarContraseña:hover,
+.recuperarContraseña:focus {
+    --background: transparent !important;
+    --background-hover: transparent !important;
+    --background-focused: transparent !important;
+    color: #8000ff !important;
+    --box-shadow: none !important;
+}
+
+.Iniciar_sesion {
+    color: white;
+}
+
+ion-button.google,
+ion-button.facebook,
+ion-button.github {
+    --background: transparent !important;
+    --background-activated: transparent !important;
+    --background-focused: transparent !important;
+    --background-hover: transparent !important;
+    --border-width: 0;
+    color: #8000ff;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+ion-button.google:hover,
+ion-button.facebook:hover,
+ion-button.github:hover {
+    color: #c994ff;
+    transform: scale(1.2);
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;       /* ocupa toda la pantalla */
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.noCuenta-btn {
+  margin-top: auto;               /* se va al fondo */
+  display: flex;
+  justify-content: center;        /* centrado horizontal */
+  align-items: center;            /* texto y botón alineados */
+  gap: 5px;                       /* espacio entre texto y botón */
+}
+
+.noCuenta {
+  color: white;
+  font-size: 12px;
+  margin: 0;                      /* quitar márgenes del <p> */
+}
+
+ion-button.btn-registrarse {
+  --background: transparent;
+  --background-hover: transparent;
+  --background-focused: transparent;
+  --border-width: 0;
+  --color: #8000ff;
+  cursor: pointer;
+  font-size: 12px;
+  text-transform: none;           /* no mayúsculas */
+  height: auto;
+  padding: 0;
+  position: relative;
+  top: 20%;
+}
+
+ion-button.btn-registrarse:hover {
+  --color: #c994ff;
+}

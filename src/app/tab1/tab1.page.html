@@ -1,17 +1,53 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <div class="login-container">
+    <form class="credencial">
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input type="text" #usuario required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" #password required></ion-input>
+      </ion-item>
+
+    </form>
+
+    <ion-button class="recuperarContraseña" expand="full" fill="clear">Olvidé la contraseña</ion-button>
+
+    <ion-button class="btn-iniciarSesion" expand="full"
+      (click)="iniciarSesion(usuario.value?.toString() || '', password.value?.toString() || '')">
+      Iniciar sesión
+    </ion-button>
+
+    <p class="Iniciar_sesion">O inicia sesión con:</p>
+
+    <div class="redes-sociales">
+      <ion-button class="google" fill="clear">
+        <ion-icon slot="start" name="logo-google"></ion-icon>
+      </ion-button>
+
+      <ion-button class="facebook" fill="clear">
+        <ion-icon slot="start" name="logo-facebook"></ion-icon>
+      </ion-button>
+
+      <ion-button class="github" fill="clear">
+        <ion-icon slot="start" name="logo-github"></ion-icon>
+      </ion-button>
+    </div>
+
+    <div class="noCuenta-btn">
+      <p class="noCuenta">
+        ¿No tenés cuenta?
+        <ion-button class="btn-registrarse" (click)="irRegistro()" fill="clear">Registrarse</ion-button>
+      </p>
+    </div>
+  </div>
 </ion-content>
