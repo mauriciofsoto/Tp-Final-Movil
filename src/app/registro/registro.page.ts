@@ -18,34 +18,31 @@ export class RegistroPage {
     this.router.navigate(['/tab1']); // Navega a la ruta 'ta1'
   }
 
-  registrarse(
-    nombre: string, 
-    nombreUsuario: string, 
-    email: string, 
-    nacimiento: string, 
-    password: string, 
-    repPassword: string
-  ) {
-    if (!nombre || !nombreUsuario || !email || !nacimiento || !password || !repPassword) {
-      alert('Completa todos los campos');
+  registrarUsuario(nombre: string, email: string, password: string, repPassword: string, fecha: string) {
+    console.log('Intentando registrar usuario...');
+    
+    // validaciones básicas
+    if (!nombre || !email || !password || !repPassword || !fecha) {
+      console.log('Por favor, completa todos los campos');
       return;
     }
-
+    
     if (password !== repPassword) {
-      alert('Las contraseñas no coinciden');
+      console.log('Las contraseñas no coinciden');
       return;
     }
-
-    alert('Registro exitoso');
-    this.router.navigate(['/tabs/tab1']);
+    
+    // simulación de registro exitoso
+    console.log('Usuario registrado exitosamente:', {
+      nombre,
+      email,
+      fechaNacimiento: fecha
+    });
+    
+    // Redirige al login después del registro
+    this.router.navigate(['/login']);
   }
 
-  volverLogin() {
-    this.router.navigate(['/tabs/tab1']);
-  }
-  iniciarSesion(usuario: string, password: string) {
-    console.log('Usuario:', usuario);
-    console.log('Password:', password);
-    // Aquí va tu lógica de inicio de sesión
-  }
 }
+
+
