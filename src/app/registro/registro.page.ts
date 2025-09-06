@@ -14,6 +14,10 @@ export class RegistroPage {
 
   constructor(private router: Router) {}
 
+  redirigirATab1() {
+    this.router.navigate(['/tab1']); // Navega a la ruta 'ta1'
+  }
+
   registrarse(
     nombre: string, 
     nombreUsuario: string, 
@@ -38,5 +42,10 @@ export class RegistroPage {
 
   volverLogin() {
     this.router.navigate(['/tabs/tab1']);
+  }
+  iniciarSesion(usuario: string, password: string) {
+    console.log('Usuario:', usuario);
+    console.log('Password:', password);
+    // Aquí va tu lógica de inicio de sesión
   }
 }

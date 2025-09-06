@@ -4,10 +4,17 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="login-container">
-    <form class="credencial">
+<ion-content class="login-content">
 
+  <div class="login-container">
+    <div class="logo-container">
+      <div class="logo">
+        <ion-icon name="book-notes"></ion-icon>
+      </div>
+      <h1>Bienvenido</h1>
+    </div>
+
+    <form class="credencial">
       <ion-item>
         <ion-label position="floating">Usuario</ion-label>
         <ion-input type="text" #usuario required></ion-input>
@@ -17,17 +24,18 @@
         <ion-label position="floating">Contraseña</ion-label>
         <ion-input type="password" #password required></ion-input>
       </ion-item>
-
     </form>
-
-    <ion-button class="recuperarContraseña" expand="full" fill="clear">Olvidé la contraseña</ion-button>
 
     <ion-button class="btn-iniciarSesion" expand="full"
       (click)="iniciarSesion(usuario.value?.toString() || '', password.value?.toString() || '')">
       Iniciar sesión
     </ion-button>
 
-    <p class="Iniciar_sesion">O inicia sesión con:</p>
+    <ion-button class="recuperarContraseña" expand="full" fill="clear">Olvidé la contraseña</ion-button>
+
+    <div class="aux">
+      <span>Inicia sesion con</span>
+    </div>
 
     <div class="redes-sociales">
       <ion-button class="google" fill="clear">
@@ -45,9 +53,9 @@
 
     <div class="noCuenta-btn">
       <p class="noCuenta">
-        ¿No tenés cuenta?
-        <ion-button class="btn-registrarse" (click)="irRegistro()" fill="clear">Registrarse</ion-button>
+        ¿No tenés cuenta? 
       </p>
+      <ion-button class="btn-registrarse" (click)="irRegistro()" fill="clear">Registrarse</ion-button>
     </div>
   </div>
 </ion-content>

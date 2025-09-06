@@ -36,7 +36,7 @@
         </form>
 
         <ion-button class="btn-regisrarse" expand="full"
-            (click)="iniciarSesion(usuario.value?.toString()  '', password.value?.toString()  '')">
+            (click)="iniciarSesion(usuario.value?.toString() || '', password.value?.toString() || '')">
             Registrarse
         </ion-button>
 
@@ -44,7 +44,7 @@
         <div class="Cuenta-btn">
             <p class="Cuenta">
                 ¿Ya tenes cuenta?
-                <ion-button class="btn-iniciarSesion" (click)="" fill="clear">Inicar sesión</ion-button>
+                <ion-button class="btn-iniciarSesion" (click)="redirigirATab1()" fill="clear">Inicar sesión</ion-button>
             </p>
         </div>
     </div>
