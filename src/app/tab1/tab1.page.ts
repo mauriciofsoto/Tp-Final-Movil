@@ -14,7 +14,8 @@ export class Tab1Page {
   iniciarSesion(usuario: string, password: string) {
   console.log('Usuario:', usuario);
   console.log('Password:', password);
-
+ // Navega directamente al Tab2
+    this.router.navigate(['/tabs/tab2']);
   // Aquí podés validar y navegar
   if (!usuario || !password) {
     alert('Completa todos los campos');
@@ -27,3 +28,6 @@ export class Tab1Page {
     this.router.navigate(['/registro']); // Página de registro fuera de tabs
   }
 }
+
+
+ 
