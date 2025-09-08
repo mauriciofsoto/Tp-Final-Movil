@@ -1,51 +1,51 @@
 <ion-header [translucent]="true">
-    <ion-toolbar>
-        <ion-title>Registro</ion-title>
-    </ion-toolbar>
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <div class="registrarse-container">
-        <form class="credencial">
+  <div class="registrarse-container">
+    <form class="credencial" (ngSubmit)="registrarUsuario()">
 
-            <ion-item>
-                <ion-label position="floating">Nombre completo</ion-label>
-                <ion-input type="text" #usuario required></ion-input>
-            </ion-item>
+      <ion-item>
+        <ion-label position="floating">Nombre completo</ion-label>
+        <ion-input type="text" [(ngModel)]="nombre" name="nombre" required></ion-input>
+      </ion-item>
 
-            <ion-item>
-                <ion-label position="floating">Email</ion-label>
-                <ion-input type="text" #email required></ion-input>
-            </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="text" [(ngModel)]="email" name="email" required></ion-input>
+      </ion-item>
 
-            <ion-item>
-                <ion-label position="floating">Contraseña</ion-label>
-                <ion-input type="password" #password required></ion-input>
-            </ion-item>
+      <ion-item>
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+      </ion-item>
 
-            <ion-item>
-                <ion-label position="floating">Repetir contraseña</ion-label>
-                <ion-input type="password" #Reppassword required></ion-input>
-            </ion-item>
+      <ion-item>
+        <ion-label position="floating">Repetir contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="repPassword" name="repPassword" required></ion-input>
+      </ion-item>
 
-            <ion-item>
-                <ion-label position="floating">Fecha de nacimiento</ion-label>
-                <ion-input type="date" #fecha required></ion-input>
-            </ion-item>
+      <ion-item>
+        <ion-label position="floating">Fecha de nacimiento</ion-label>
+        <ion-input type="date" [(ngModel)]="fecha" name="fecha" required></ion-input>
+      </ion-item>
 
-        </form>
+      <ion-button class="btn-registrarse" expand="full" type="submit">
+        Registrarse
+      </ion-button>
 
-        <ion-button class="btn-regisrarse" expand="full"
-            (click)="iniciarSesion(usuario.value?.toString() || '', password.value?.toString() || '')">
-            Registrarse
+    </form>
+
+    <div class="Cuenta-btn">
+      <p class="Cuenta">
+        ¿Ya tenés cuenta?
+        <ion-button class="btn-iniciarSesion" (click)="irLogin()" fill="clear">
+          Iniciar sesión
         </ion-button>
-
-    
-        <div class="Cuenta-btn">
-            <p class="Cuenta">
-                ¿Ya tenes cuenta?
-                <ion-button class="btn-iniciarSesion" (click)="" fill="clear">Inicar sesión</ion-button>
-            </p>
-        </div>
+      </p>
     </div>
+  </div>
 </ion-content>
